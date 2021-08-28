@@ -78,7 +78,7 @@ void loop()
             }             
         }       
         std::sort(nets.begin(), nets.end(), cmp_timestmp);
-        Serial.println("SSID\t\t      | BSSID\t     | xSeen | Last Seen |  Enc  | Mean RSSI");
+        Serial.println("SSID\t\t\t  | BSSID\t      | xSeen | Last Seen |  Enc  | Mean RSSI");
         for(std::vector<Network>::iterator it = nets.begin(); it != nets.end(); ++it) {   
           char prBuffer[255] ={"\0"}; 
           sprintf(prBuffer, "%-25s | \0",it->networkname.substring(0, 25).c_str());
